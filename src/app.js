@@ -7,12 +7,18 @@
 // const { getAge, getUUID } = require('./plugins')
 // const { buildMakePerson } = require('./js-foundation/05-factory')
 
-const getPokemonById = require('./js-foundation/06-promises')
+const { buildLogger } = require('./plugins')
 
-getPokemonById(1)
-  .then((pokemon) => console.log({ pokemon }))
-  .catch((err) => console.log('Por favor intente de nuevo'))
-  .finally(() => console.log('Finalmente'))
+const logger = buildLogger('app.js')
+
+logger.log('Hola mundo')
+logger.error('Esto es algo malo')
+// const getPokemonById = require('./js-foundation/06-promises')
+
+// getPokemonById(1)
+//   .then((pokemon) => console.log({ pokemon }))
+//   .catch((err) => console.log('Por favor intente de nuevo'))
+//   .finally(() => console.log('Finalmente'))
 
 // token de acceso
 // Públicas
